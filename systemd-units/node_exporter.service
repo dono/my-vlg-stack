@@ -1,0 +1,12 @@
+[Unit]
+Description=Node exporter for Prometheus/VictoriaMetrics
+Documentation=https://github.com/prometheus/node_exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/node_exporter
+ExecStop=/bin/kill -INT $MAINPID
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

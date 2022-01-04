@@ -1,0 +1,13 @@
+[Unit]
+Description=High-performance, cost-effective and scalable time series database, long-term remote storage for Prometheus
+Documentation=https://docs.victoriametrics.com/
+
+[Service]
+Restart=always
+ExecStart=/usr/local/bin/victoriametrics -storageDataPath /var/lib/victoriametrics -retentionPeriod 15 -promscrape.config=/etc/victoriametrics/victoriametrics.yml
+ExecStop=/bin/kill -s SIGTERM $MAINPID
+LimitNOFILE=65536
+LimitNPROC=32768
+
+[Install]
+WantedBy=multi-user.target
