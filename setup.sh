@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 
-RELEASE_URL="https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.71.0/victoria-metrics-amd64-v1.7.0.tar.gz"
+RELEASE_URL="https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.72.0/victoria-metrics-amd64-v1.72.0.tar.gz"
 
 # Move work_dir
 mkdir -p ./work_dir/victoriametrics
