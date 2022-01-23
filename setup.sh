@@ -3,8 +3,8 @@
 RELEASE_URL="https://github.com/VictoriaMetrics/VictoriaMetrics/releases/download/v1.71.0/victoria-metrics-amd64-v1.7.0.tar.gz"
 
 # Move work_dir
-mkdir ./work_dir
-cd ./work_dir
+mkdir -p ./work_dir/victoriametrics
+cd ./work_dir/victoriametrics
 
 # DL
 wget ${RELEASE_URL}
