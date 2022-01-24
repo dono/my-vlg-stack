@@ -19,7 +19,7 @@ unzip `basename ${LOKI_RELEASE_URL}`
 useradd --system --user-group --home /var/lib/loki --no-create-home --shell /sbin/nologin loki
 
 # Copy binary to /usr/local/bin/
-install -v ./loki-linux-amd64 /usr/local/bin/loki/
+install -v ./loki-linux-amd64 /usr/local/bin/loki
 
 # Copy config to /etc/loki/
 install -v -D ../../config/loki.yml /etc/loki/loki.yml
