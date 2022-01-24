@@ -22,10 +22,10 @@ useradd --system --user-group --home /var/lib/victoriametrics --no-create-home -
 install -v ./victoria-metrics-prod /usr/local/bin/victoriametrics
 
 # Copy config to /etc/victoriametrics/
-install -v -D ../config/victoriametrics.yml /etc/victoriametrics/victoriametrics.yml
+install -v -D ../../config/victoriametrics.yml /etc/victoriametrics/victoriametrics.yml
 
 # Create a directory for victoriametrics
 install -v -o victoriametrics -g victoriametrics -d /var/lib/victoriametrics/
 
 # Copy victoriametrics.service file to systemd
-install -v ../systemd-units/victoriametrics.service /lib/systemd/system/victoriametrics.service
+install -v ../../systemd-units/victoriametrics.service /lib/systemd/system/victoriametrics.service
