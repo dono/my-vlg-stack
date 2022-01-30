@@ -15,8 +15,10 @@ install -v `basename ${RELEASE_URL}` /usr/local/src/
 # Unzip
 tar -xzvf `basename ${RELEASE_URL}`
 
+set +e
 # Create user and group to run VictoriaMetrics
 useradd --system --user-group --home /var/lib/victoriametrics --no-create-home --shell /sbin/nologin victoriametrics
+set -e
 
 # Copy binary to /usr/local/bin/
 install -v ./victoria-metrics-prod /usr/local/bin/victoriametrics
