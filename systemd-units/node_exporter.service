@@ -5,7 +5,6 @@ After=network.target
 
 [Service]
 ExecStart=/usr/local/bin/node_exporter
-ExecStop=/bin/kill -INT $MAINPID
 Restart=always
 
 [Install]
